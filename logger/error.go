@@ -12,7 +12,7 @@ type errorLog struct {
 
 func Error(c appengine.Context, e error) string {
 	el := errorLog{
-		Log: Log{Type: "Error"},
+		Log:     Log{Type: "Error"},
 		Message: e.Error(),
 	}
 

@@ -1,6 +1,6 @@
 package logger
 
 type EventLog struct {
-  Log
-  Views []string
+	Log
+	Views []string
 }

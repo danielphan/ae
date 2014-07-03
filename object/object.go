@@ -17,7 +17,7 @@ var ErrNotChanged = errors.New("object: Object not changed")
 
 type Entity struct {
 	Kind string
-	ID string
+	ID   string
 }
 
 func (e Entity) Key(c appengine.Context) *datastore.Key {
@@ -42,7 +42,7 @@ func New(kind string, id string) Object {
 	return Object{
 		Entity: Entity{
 			Kind: kind,
-			ID: id,
+			ID:   id,
 		},
 	}
 }
