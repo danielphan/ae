@@ -19,7 +19,7 @@ func Error(c appengine.Context, e error) string {
 	var s string
 	b, err := json.Marshal(el)
 	if err != nil {
-		s = `{"Type":"Error","Message":"could not serialize error"}`
+		s = `{"Type":"Error","Message":"Could not serialize error."}`
 		c.Criticalf("%s", e)
 		c.Criticalf("%s", err)
 	} else {
