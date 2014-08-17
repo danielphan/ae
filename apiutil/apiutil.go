@@ -13,6 +13,7 @@ var ErrMustLogIn = errors.New("Must be logged in.")
 type HandlerFunc func(w http.ResponseWriter, r *http.Request) error
 
 func (f HandlerFunc) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	w.Header().Add("Access-Control-Allow-Origin", "*")
 	f(w, r)
 }
 
