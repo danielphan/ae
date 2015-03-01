@@ -1,11 +1,13 @@
 package apiutil
 
 import (
+	"errors"
+	"net/http"
+
+	"github.com/verticalpalette/ae/logger"
+
 	"appengine"
 	"appengine/user"
-	"errors"
-	"github.com/danielphan/ae/logger"
-	"net/http"
 )
 
 var ErrMustLogIn = errors.New("Must be logged in.")
